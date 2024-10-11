@@ -1,10 +1,18 @@
+import {createBox, createText} from '@shopify/restyle';
+import {Theme} from '@theme';
 import React from 'react';
-import {Text, View} from 'react-native';
 
 export function LoginScreen() {
+	const Box = createBox<Theme>();
+	const Text = createText<Theme>();
+
 	return (
-		<View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-			<Text>LoginScreen</Text>
-		</View>
+		<Box
+			flex={1}
+			backgroundColor="blueDarker"
+			alignItems="center"
+			justifyContent="center">
+			<Text color="yellowPrimary">LoginScreen</Text>
+		</Box>
 	);
 }
