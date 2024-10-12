@@ -1,9 +1,9 @@
-import {createBox, createText} from '@shopify/restyle';
+import {Box, TouchableOpacityBox} from '@components';
+import {createText} from '@shopify/restyle';
 import {Theme} from '@theme';
 import React from 'react';
 
 export function LoginScreen() {
-	const Box = createBox<Theme>();
 	const Text = createText<Theme>();
 
 	return (
@@ -12,7 +12,15 @@ export function LoginScreen() {
 			backgroundColor="blueDarker"
 			alignItems="center"
 			justifyContent="center">
-			<Text color="yellowPrimary">LoginScreen</Text>
+			<TouchableOpacityBox
+				backgroundColor="blueMain"
+				borderRadius="s8"
+				paddingHorizontal="s16"
+				paddingVertical="s4">
+				<Text color="yellowPrimary" fontSize={24}>
+					Login
+				</Text>
+			</TouchableOpacityBox>
 		</Box>
 	);
 }
