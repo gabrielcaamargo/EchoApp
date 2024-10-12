@@ -17,7 +17,10 @@ export function LoginScreen() {
 				borderRadius="s8"
 				paddingHorizontal="s16"
 				paddingVertical="s4">
-				<Text color="yellowPrimary" fontSize={24}>
+				<Text
+					color="yellowPrimary"
+					fontSize={24}
+					style={{fontFamily: 'Sora-Bold'}}>
 					Login
 				</Text>
 			</TouchableOpacityBox>
