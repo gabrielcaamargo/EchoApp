@@ -1,11 +1,7 @@
-import {Box, TouchableOpacityBox} from '@components';
-import {createText} from '@shopify/restyle';
-import {Theme} from '@theme';
 import React from 'react';
+import {Box, Text, TouchableOpacityBox} from '@components';
 
 export function LoginScreen() {
-	const Text = createText<Theme>();
-
 	return (
 		<Box
 			flex={1}
@@ -18,9 +14,8 @@ export function LoginScreen() {
 				paddingHorizontal="s16"
 				paddingVertical="s4">
 				<Text
-					color="yellowPrimary"
-					fontSize={24}
-					style={{fontFamily: 'Sora-Bold'}}>
+					color="yellowMain"
+					fontFamily="Sora">
 					Login
 				</Text>
 			</TouchableOpacityBox>
