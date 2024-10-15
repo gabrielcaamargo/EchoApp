@@ -29,7 +29,7 @@ const palette = {
 export const theme = createTheme({
 	colors: {
 		...palette,
-
+		background: palette.blueDarker,
 		bluePrimary: palette.blueMain,
 		blueSecondary: palette.blueLight,
 
