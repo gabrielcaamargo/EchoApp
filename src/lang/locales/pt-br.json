@@ -1,0 +1,9 @@
+{
+	"translation": {
+    "signin": {
+      "hello": "Olá",
+      "world": "Mundo",
+			"welcome": "Bem-vindo"
+    }
+  }
+}

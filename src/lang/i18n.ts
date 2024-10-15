@@ -1,7 +1,7 @@
 import i18n from 'i18next';
 import {initReactI18next} from 'react-i18next';
-import en from './en.json';
-import ptBr from './pt-br.json';
+import en from './locales/en.json';
+import ptBr from './locales/pt-br.json';
 
 const resources = {
 	'en-US': en,
@@ -11,6 +11,9 @@ const resources = {
 i18n.use(initReactI18next).init({
 	compatibilityJSON: 'v3',
 	lng: 'pt-BR',
+	interpolation: {
+		escapeValue: false,
+	},
 	resources,
 });
 
