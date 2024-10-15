@@ -1,18 +1,18 @@
 import React from 'react';
-import {Box, Icon} from '@components';
+import {useTranslation} from 'react-i18next';
+import {Box, Screen, Text} from '@components';
 
 export function LoginScreen() {
+	const {t} = useTranslation();
+
 	return (
-		<Box
-			flex={1}
-			backgroundColor="blueDarker"
-			alignItems="center"
-			justifyContent="center">
-			<Icon
-				name="upcircleo"
-				variant="AntDesign"
-				color="greenSuccess"
-			/>
-		</Box>
+		<Screen>
+			<Box
+				flex={1}
+				alignItems="center"
+				justifyContent="center">
+				<Text color="yellowPrimary">{t('hello')}</Text>
+			</Box>
+		</Screen>
 	);
 }
