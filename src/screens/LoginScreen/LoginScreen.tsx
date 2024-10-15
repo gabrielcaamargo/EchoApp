@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box, Text, TouchableOpacityBox} from '@components';
+import {Box, Icon} from '@components';
 
 export function LoginScreen() {
 	return (
@@ -8,17 +8,11 @@ export function LoginScreen() {
 			backgroundColor="blueDarker"
 			alignItems="center"
 			justifyContent="center">
-			<TouchableOpacityBox
-				backgroundColor="blueMain"
-				borderRadius="s8"
-				paddingHorizontal="s16"
-				paddingVertical="s4">
-				<Text
-					color="yellowMain"
-					fontFamily="Sora">
-					Login
-				</Text>
-			</TouchableOpacityBox>
+			<Icon
+				name="upcircleo"
+				variant="AntDesign"
+				color="greenSuccess"
+			/>
 		</Box>
 	);
 }
