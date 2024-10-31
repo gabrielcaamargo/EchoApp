@@ -1,35 +1,36 @@
 import {createTheme} from '@shopify/restyle';
 
 const palette = {
-	blueLighter: '#00568F',
-	blueLight: '#003A61',
-	blueMain: '#002E4E',
-	blueDark: '#00253E',
-	blueDarker: '#001A2C',
+	blueLighter: '#3399FF',
+	blueLight: '#0073E6',
+	blueMain: '#0052CC',
+	blueDark: '#003399',
+	blueDarker: '#001966',
 
-	yellowLighter: '#FFEE32',
-	yellowLight: '#FFD100',
-	yellowMain: '#F7B801',
-	yellowDark: '#EF9F01',
-	yellowDarker: '#EB9302',
+	yellowLighter: '#FFFF66',
+	yellowLight: '#FFFF00',
+	yellowMain: '#FFCC00',
+	yellowDark: '#FF9900',
+	yellowDarker: '#FF6600',
 
-	grayLighter: '#D4D4D8',
-	grayLight: '#A1A1AA',
-	grayMain: '#71717A',
-	grayDark: '#525252',
-	grayDarker: '#404040',
+	grayLighter: '#E0E0E0',
+	grayLight: '#B3B3B3',
+	grayMain: '#808080',
+	grayDark: '#4D4D4D',
+	grayDarker: '#262626',
+	grayDarkest: '#1A1A1A',
 
-	white: '#FFFFFF',
+	white: '#F5F5F5',
 	black: '#000000',
 
 	redMain: '#E5383B',
-	greenMain: '#2DC653',
+	greenMain: '#33CC33',
 };
 
 export const theme = createTheme({
 	colors: {
 		...palette,
-		background: palette.blueDarker,
+		background: palette.yellowLight,
 		bluePrimary: palette.blueMain,
 		blueSecondary: palette.blueLight,
 

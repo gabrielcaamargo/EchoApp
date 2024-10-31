@@ -8,20 +8,20 @@ import {ScrollViewContainer, ViewContainer} from './components/ScreenContainer';
 interface ScreenProps {
 	children: React.ReactNode;
 	scrollable?: boolean;
+	style?: ViewStyle;
 }
 
-export function Screen({children, scrollable}: ScreenProps) {
+export function Screen({children, scrollable, style}: ScreenProps) {
 	const colors = useAppTheme();
 	const {bottom, top} = useAppSafeArea();
 	const Container = scrollable ? ScrollViewContainer : ViewContainer;
 	return (
 		<KeyboardAvoidingView
-			style={$keyboardAvoidingViewStyles}
+			style={[$keyboardAvoidingViewStyles, style]}
 			behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
 			<Container backgroundColor={colors.background}>
 				<Box
 					flex={1}
-					paddingHorizontal="s16"
 					style={{paddingTop: top, paddingBottom: bottom}}>
 					{children}
 				</Box>

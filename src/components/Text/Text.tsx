@@ -5,11 +5,13 @@ import {Theme} from '@theme';
 
 const RestyleText = createText<Theme>();
 
-type FontFamily = 'Inter' | 'Sora';
+type FontFamily = 'Poppins' | 'Sora';
 
-type FontWeight = 'Regular' | 'Medium' | 'Semibold' | 'Bold';
+type FontWeight = 'Regular' | 'Medium' | 'SemiBold' | 'Bold';
 
 type TextPresets =
+	| 'headingSuperLarge'
+	| 'headingExtraLarge'
 	| 'headingLarge'
 	| 'headingMedium'
 	| 'headingSmall'
@@ -26,6 +28,8 @@ export interface TextProps extends RestyleTextProps<Theme>, RNTextProps {
 }
 
 export const $fontSizes: Record<TextPresets, TextStyle> = {
+	headingSuperLarge: {fontSize: 48, lineHeight: 57.6},
+	headingExtraLarge: {fontSize: 40, lineHeight: 48},
 	headingLarge: {fontSize: 32, lineHeight: 38.4},
 	headingMedium: {fontSize: 22, lineHeight: 26.4},
 	headingSmall: {fontSize: 18, lineHeight: 23.4},
@@ -45,7 +49,7 @@ function getFontFamily(fontFamily: FontFamily, fontWeight: FontWeight) {
 export function Text({
 	preset = 'paragraphMedium',
 	color = 'white',
-	fontFamily = 'Inter',
+	fontFamily = 'Poppins',
 	weight = 'Regular',
 	children,
 	...textProps

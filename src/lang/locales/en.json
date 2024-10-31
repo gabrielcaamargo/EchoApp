@@ -1,9 +1,7 @@
 {
 	"translation": {
     "signin": {
-      "hello": "Olá",
-      "world": "Mundo",
-			"welcome": "Welcome"
+      "greetings": "Welcome to Echo"
     }
   }
 }
