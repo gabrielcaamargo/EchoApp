@@ -1,6 +1,5 @@
 import React from 'react';
 import {Box, Screen, Text} from '@components';
-import FloatDoodle from '../../assets/';
 // import {useTranslation} from '@hooks';
 export function LanguageScreen() {
 	// const {translate} = useTranslation();
