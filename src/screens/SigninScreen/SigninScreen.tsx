@@ -1,6 +1,5 @@
-import {Box, Screen, Text, TextInput} from '@components';
+import {Box, PasswordInput, Screen, Text, TextInput} from '@components';
 import React from 'react';
-import {Alert} from 'react-native';
 
 export function SigninScreen() {
 	return (
@@ -15,7 +14,7 @@ export function SigninScreen() {
 
 			<Box marginTop="s16">
 				{/* Form */}
-				<TextInput label="Username or email" />
+				<PasswordInput label="Password" />
 			</Box>
 		</Screen>
 	);

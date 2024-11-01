@@ -9,7 +9,7 @@ import {
 import {Box, BoxProps, Icon, IconVariant, Text, TouchableOpacityBox} from '@components';
 import {useAppTheme} from '@/hooks';
 
-type TextInputIcon =
+export type TextInputIcon =
 	| {
 			iconVariant: IconVariant;
 			iconName: string;
@@ -21,7 +21,7 @@ type TextInputIcon =
 			onPressIcon?: never;
 	  };
 
-type TextInputProps = {
+export type TextInputProps = {
 	label?: string;
 	boxProps?: BoxProps;
 } & RNTextInputProps &

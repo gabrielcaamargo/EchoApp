@@ -5,3 +5,4 @@ export * from './Icon/Icon';
 export * from './Screen/Screen';
 export * from './Separator/Separator';
 export * from './TextInput/TextInput';
+export * from './TextInput/PasswordInput';
