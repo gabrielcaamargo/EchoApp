@@ -1,11 +1,25 @@
 import React from 'react';
 import {Box, Button, Screen, Separator, Text} from '@components';
+import {AuthScreenProps} from '@routes';
 
-export function PresentationScreen() {
+export function PresentationScreen({navigation}: AuthScreenProps<'PresentationScreen'>) {
+	function handleNavigateToSignup() {
+		// TODO: Implement navigation to signup
+	}
+
+	function handleNavigateToSignin() {
+		// TODO: Implement navigation to signin
+	}
+
 	return (
 		<Screen>
-			<Box flex={1} padding="s16">
-				<Text preset="headingSuperLarge" fontFamily="Sora" weight="Bold">
+			<Box
+				flex={1}
+				padding="s16">
+				<Text
+					preset="headingSuperLarge"
+					fontFamily="Sora"
+					weight="Bold">
 					Connect{' '}
 					<Text
 						preset="headingSuperLarge"
@@ -25,7 +39,10 @@ export function PresentationScreen() {
 					.
 				</Text>
 
-				<Text marginTop="s12" preset="headingMedium" fontFamily="Sora">
+				<Text
+					marginTop="s12"
+					preset="headingMedium"
+					fontFamily="Sora">
 					Echo is where every conversation feels personal.{' '}
 					<Text
 						preset="headingMedium"
@@ -39,7 +56,12 @@ export function PresentationScreen() {
 				<Box flex={1} />
 
 				<Box>
-					<Text color='grayMain' textAlign='center' marginBottom='s4'>Enter now</Text>
+					<Text
+						color="grayMain"
+						textAlign="center"
+						marginBottom="s4">
+						Enter now
+					</Text>
 
 					<Separator />
 
@@ -49,8 +71,17 @@ export function PresentationScreen() {
 						justifyContent="space-between"
 						alignItems="center"
 						gap="s8">
-						<Button title="Signup" flex={1} />
-						<Button title="Sign in" preset="outline" flex={1} />
+						<Button
+							title="Signup"
+							flex={1}
+							onPress={handleNavigateToSignup}
+						/>
+						<Button
+							title="Sign in"
+							preset="outline"
+							flex={1}
+							onPress={handleNavigateToSignin}
+						/>
 					</Box>
 				</Box>
 			</Box>
