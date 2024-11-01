@@ -8,47 +8,27 @@ export function PresentationScreen({navigation}: AuthScreenProps<'PresentationSc
 	}
 
 	function handleNavigateToSignin() {
-		// TODO: Implement navigation to signin
+		navigation.navigate('SigninScreen');
 	}
 
 	return (
 		<Screen>
-			<Box
-				flex={1}
-				padding="s16">
-				<Text
-					preset="headingSuperLarge"
-					fontFamily="Sora"
-					weight="Bold">
+			<Box flex={1}>
+				<Text preset="headingSuperLarge" fontFamily="Sora" weight="Bold">
 					Connect{' '}
-					<Text
-						preset="headingSuperLarge"
-						fontFamily="Sora"
-						weight="Bold"
-						color="greenMain">
+					<Text preset="headingSuperLarge" fontFamily="Sora" weight="Bold" color="greenMain">
 						instantly
 					</Text>
 					, chat{' '}
-					<Text
-						preset="headingSuperLarge"
-						fontFamily="Sora"
-						weight="Bold"
-						color="greenMain">
+					<Text preset="headingSuperLarge" fontFamily="Sora" weight="Bold" color="greenMain">
 						effortlessly
 					</Text>
 					.
 				</Text>
 
-				<Text
-					marginTop="s12"
-					preset="headingMedium"
-					fontFamily="Sora">
+				<Text marginTop="s12" preset="headingMedium" fontFamily="Sora">
 					Echo is where every conversation feels personal.{' '}
-					<Text
-						preset="headingMedium"
-						fontFamily="Sora"
-						color="greenMain"
-						weight="SemiBold">
+					<Text preset="headingMedium" fontFamily="Sora" color="greenMain" weight="SemiBold">
 						Join now.
 					</Text>
 				</Text>
@@ -56,10 +36,7 @@ export function PresentationScreen({navigation}: AuthScreenProps<'PresentationSc
 				<Box flex={1} />
 
 				<Box>
-					<Text
-						color="grayMain"
-						textAlign="center"
-						marginBottom="s4">
+					<Text color="grayMain" textAlign="center" marginBottom="s4">
 						Enter now
 					</Text>
 
@@ -70,18 +47,10 @@ export function PresentationScreen({navigation}: AuthScreenProps<'PresentationSc
 						flexDirection="row"
 						justifyContent="space-between"
 						alignItems="center"
-						gap="s8">
-						<Button
-							title="Signup"
-							flex={1}
-							onPress={handleNavigateToSignup}
-						/>
-						<Button
-							title="Sign in"
-							preset="outline"
-							flex={1}
-							onPress={handleNavigateToSignin}
-						/>
+						gap="s8"
+						marginTop="s8">
+						<Button title="Signup" flex={1} onPress={handleNavigateToSignup} />
+						<Button title="Sign in" preset="outline" flex={1} onPress={handleNavigateToSignin} />
 					</Box>
 				</Box>
 			</Box>
