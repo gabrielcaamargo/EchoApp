@@ -20,9 +20,7 @@ export function Screen({children, scrollable, style}: ScreenProps) {
 			style={[$keyboardAvoidingViewStyles, style]}
 			behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
 			<Container backgroundColor={colors.background}>
-				<Box
-					flex={1}
-					style={{paddingTop: top, paddingBottom: bottom}}>
+				<Box flex={1} style={{paddingTop: top, paddingBottom: bottom}}>
 					{children}
 				</Box>
 			</Container>

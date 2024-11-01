@@ -7,11 +7,11 @@ const palette = {
 	blueDark: '#003399',
 	blueDarker: '#001966',
 
-	yellowLighter: '#FFFF66',
-	yellowLight: '#FFFF00',
-	yellowMain: '#FFCC00',
-	yellowDark: '#FF9900',
-	yellowDarker: '#FF6600',
+	yellowLighter: '#52B788',
+	yellowLight: '#40916C',
+	greenMain: '#2D6A4F',
+	yellowDark: '#1B4332',
+	greenDarker: '#081C15',
 
 	grayLighter: '#E0E0E0',
 	grayLight: '#B3B3B3',
@@ -24,18 +24,19 @@ const palette = {
 	black: '#000000',
 
 	redMain: '#E5383B',
-	greenMain: '#33CC33',
+	green: '#33CC33',
+	transparent: '#FFFFFF00',
 };
 
 export const theme = createTheme({
 	colors: {
 		...palette,
-		background: palette.yellowLight,
+		background: palette.grayDarkest,
 		bluePrimary: palette.blueMain,
 		blueSecondary: palette.blueLight,
 
-		yellowPrimary: palette.yellowMain,
-		yellowSecondary: palette.yellowLight,
+		greenPrimary: palette.green,
+		greenSecondary: palette.yellowLight,
 
 		grayPrimary: palette.grayMain,
 		graySecondary: palette.grayLight,
@@ -44,7 +45,7 @@ export const theme = createTheme({
 		black: palette.black,
 
 		redError: palette.redMain,
-		greenSuccess: palette.greenMain,
+		greenSuccess: palette.green,
 	},
 	borderRadii: {
 		s4: 4,

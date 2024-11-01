@@ -72,11 +72,5 @@ export function Icon({variant, name, size = 24, color = 'white'}: IconProps) {
 
 	iconFamilyHasIcon();
 
-	return (
-		<IconComponent
-			name={name}
-			size={size}
-			color={theme.colors[color]}
-		/>
-	);
+	return <IconComponent name={name} size={size} color={theme.colors[color]} />;
 }

@@ -1,2 +1,2 @@
-export * from './LanguageScreen/LanguageScreen';
+export * from './PresentationScreen/PresentationScreen';
 export * from './SignupScreen/SignupScreen';

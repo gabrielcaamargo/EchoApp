@@ -1,3 +1,4 @@
+import {TouchableOpacity, TouchableOpacityProps} from 'react-native';
 import {
 	createBox,
 	createRestyleComponent,
@@ -11,7 +12,6 @@ import {
 	border,
 } from '@shopify/restyle';
 import {Theme} from '@theme';
-import {TouchableOpacity, TouchableOpacityProps} from 'react-native';
 
 export type TouchableOpacityBoxProps = BackgroundColorProps<Theme> &
 	SpacingProps<Theme> &
