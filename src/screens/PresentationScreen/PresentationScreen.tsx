@@ -1,8 +1,11 @@
 import React from 'react';
 import {Box, Button, Screen, Separator, Text} from '@components';
 import {AuthScreenProps} from '@routes';
+import {useTranslation} from '@hooks';
 
 export function PresentationScreen({navigation}: AuthScreenProps<'PresentationScreen'>) {
+	const {translate} = useTranslation();
+
 	function handleNavigateToSignup() {
 		// TODO: Implement navigation to signup
 	}
@@ -15,21 +18,21 @@ export function PresentationScreen({navigation}: AuthScreenProps<'PresentationSc
 		<Screen>
 			<Box flex={1}>
 				<Text preset="headingSuperLarge" fontFamily="Sora" weight="Bold">
-					Connect{' '}
+					{translate('presentation', 'greetings-connect')}{' '}
 					<Text preset="headingSuperLarge" fontFamily="Sora" weight="Bold" color="greenMain">
-						instantly
+						{translate('presentation', 'greetings-instantly')}
 					</Text>
-					, chat{' '}
+					{translate('presentation', 'greetings-chat')}{' '}
 					<Text preset="headingSuperLarge" fontFamily="Sora" weight="Bold" color="greenMain">
-						effortlessly
+						{translate('presentation', 'greetings-effortlessly')}
 					</Text>
 					.
 				</Text>
 
 				<Text marginTop="s12" preset="headingMedium" fontFamily="Sora">
-					Echo is where every conversation feels personal.{' '}
+					{translate('presentation', 'greetings-presentation')}{' '}
 					<Text preset="headingMedium" fontFamily="Sora" color="greenMain" weight="SemiBold">
-						Join now.
+						{translate('presentation', 'greetings-join')}
 					</Text>
 				</Text>
 
@@ -37,7 +40,7 @@ export function PresentationScreen({navigation}: AuthScreenProps<'PresentationSc
 
 				<Box>
 					<Text color="grayMain" textAlign="center" marginBottom="s4">
-						Enter now
+						{translate('default', 'enter-now')}
 					</Text>
 
 					<Separator />
@@ -49,8 +52,8 @@ export function PresentationScreen({navigation}: AuthScreenProps<'PresentationSc
 						alignItems="center"
 						gap="s8"
 						marginTop="s8">
-						<Button title="Signup" flex={1} onPress={handleNavigateToSignup} />
-						<Button title="Sign in" preset="outline" flex={1} onPress={handleNavigateToSignin} />
+						<Button title={translate('default', 'signup')} flex={1} onPress={handleNavigateToSignup} />
+						<Button title={translate('default', 'signin')} preset="outline" flex={1} onPress={handleNavigateToSignin} />
 					</Box>
 				</Box>
 			</Box>

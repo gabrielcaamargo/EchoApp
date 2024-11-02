@@ -1,9 +1,17 @@
 {
 	"translation": {
-    "signin": {
-      "hello": "Olá",
-      "world": "Mundo",
-			"welcome": "Bem-vindo"
-    }
-  }
+		"presentation": {
+			"greetings-connect": "Se conecte",
+			"greetings-instantly": "rapidamente",
+			"greetings-chat": ", converse",
+			"greetings-effortlessly": "sem esforço",
+			"greetings-presentation": "Echo é onde toda conversa parece pessoal.",
+			"greetings-join": "Junte-se agora."
+		},
+		"default": {
+			"enter-now": "Entre agora",
+			"signup": "Criar conta",
+			"signin": "Entrar"
+		}
+	}
 }

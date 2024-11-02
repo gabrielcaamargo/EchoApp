@@ -1,7 +1,18 @@
 {
 	"translation": {
-    "signin": {
-      "greetings": "Welcome to Echo"
-    }
+    "presentation": {
+      "greetings-connect": "Connect",
+			"greetings-instantly": "fast",
+			"greetings-chat": ", chat",
+			"greetings-effortlessly": "effortlessly",
+
+			"greetings-presentation": "Echo is where every conversation feels personal.",
+			"greetings-join": "Join now."
+    },
+		"default": {
+			"enter-now": "Enter now",
+			"signup": "Signup",
+			"signin": "Entrar"
+		}
   }
 }

@@ -1,5 +1,5 @@
 import {useTranslation as useI18Translation} from 'react-i18next';
-import language from '../lang/locales/pt-br.json';
+import language from '@/lang/locales/pt-br.json';
 
 type Translations = typeof language.translation;
 type Path = keyof Translations;
