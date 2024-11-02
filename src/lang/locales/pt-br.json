@@ -21,9 +21,17 @@
 			"signin-password-placeholder": "Digite sua senha",
 			"signin-forgot-password": "Esqueceu sua senha?"
 		},
+		"signup": {
+			"signup-description": "Crie uma conta e comece a usar o Echo",
+			"signup-email-placeholder": "Digite seu email",
+			"signup-password-placeholder": "Digite sua senha",
+			"signup-confirm-password-placeholder": "Confirme sua senha"
+		},
 		"form": {
 			"invalid-email": "Email inválido",
-			"short-password": "A senha deve ter pelo menos 8 caracteres"
+			"short-password": "A senha deve ter pelo menos 8 caracteres",
+			"password-requirements": "A senha deve ter 8+ caracteres, com letras maiúsculas, minúsculas, um número e um caractere especial",
+			"password-mismatch": "As senhas não coincidem"
 		}
 	}
 }

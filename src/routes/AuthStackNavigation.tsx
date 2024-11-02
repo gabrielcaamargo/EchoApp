@@ -1,6 +1,6 @@
 import React from 'react';
 import {createNativeStackNavigator, NativeStackNavigationOptions} from '@react-navigation/native-stack';
-import {PresentationScreen, SigninScreen} from '@screens';
+import {PresentationScreen, SigninScreen, SignupScreen} from '@screens';
 import {AuthStackParamList} from './navigationTypes';
 
 const Stack = createNativeStackNavigator<AuthStackParamList>();
@@ -15,6 +15,7 @@ export function AuthStackNavigation() {
 		<Stack.Navigator screenOptions={screenOptions}>
 			<Stack.Screen name="PresentationScreen" component={PresentationScreen} />
 			<Stack.Screen name="SigninScreen" component={SigninScreen} />
+			<Stack.Screen name="SignupScreen" component={SignupScreen} />
 		</Stack.Navigator>
 	);
 }

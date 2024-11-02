@@ -7,7 +7,7 @@ export function PresentationScreen({navigation}: AuthScreenProps<'PresentationSc
 	const {translate} = useTranslation();
 
 	function handleNavigateToSignup() {
-		// TODO: Implement navigation to signup
+		navigation.navigate('SignupScreen');
 	}
 
 	function handleNavigateToSignin() {

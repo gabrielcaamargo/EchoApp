@@ -22,9 +22,17 @@
 			"signin-password-placeholder": "Enter your password",
 			"signin-forgot-password": "Forgot password?"
 		},
+		"signup": {
+			"signup-description": "Create an account and start using Echo",
+			"signup-email-placeholder": "Enter your email",
+			"signup-password-placeholder": "Enter your password",
+			"signup-confirm-password-placeholder": "Confirm your password"
+		},
 		"form": {
 			"invalid-email": "Invalid email",
-			"short-password": "Password must be at least 8 characters"
+			"short-password": "Password must be at least 8 characters",
+			"password-requirements": "Password must be 8+ characters, with uppercase, lowercase, a number, and a special character",
+			"password-mismatch": "The passwords don't match"
 		}
   }
 }

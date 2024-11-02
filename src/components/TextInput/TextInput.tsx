@@ -51,6 +51,8 @@ export function TextInput({
 		inputRef.current?.focus();
 	}
 
+	const borderColor = errorMessage ? 'redError' : inputRef.current?.isFocused() ? 'greenMain' : 'grayPrimary';
+
 	return (
 		<Box>
 			<Pressable onPress={onInputFocus}>
@@ -58,7 +60,7 @@ export function TextInput({
 
 				<Box
 					borderWidth={1}
-					borderColor={errorMessage ? 'redError' : 'greenMain'}
+					borderColor={borderColor}
 					marginTop="s4"
 					height={48}
 					paddingHorizontal="s16"
