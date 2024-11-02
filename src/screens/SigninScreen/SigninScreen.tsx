@@ -1,10 +1,12 @@
-import {Box, Button, FormPasswordInput, FormTextInput, Screen, Text, TouchableOpacityBox} from '@components';
 import React from 'react';
-import {useForm} from 'react-hook-form';
-import {signinSchema, SigninSchema} from './signin.schema';
 import {zodResolver} from '@hookform/resolvers/zod';
+import {useForm} from 'react-hook-form';
+import {Box, Button, FormPasswordInput, FormTextInput, Screen, Text, TouchableOpacityBox} from '@components';
+import {useTranslation} from '@hooks';
+import {signinSchema, SigninSchema} from './signin.schema';
 
 export function SigninScreen() {
+	const {translate} = useTranslation();
 	const {control, handleSubmit} = useForm<SigninSchema>({
 		resolver: zodResolver(signinSchema),
 		mode: 'onChange',
@@ -22,32 +24,37 @@ export function SigninScreen() {
 	return (
 		<Screen canGoBack>
 			<Text preset="headingExtraLarge" weight="Bold" color="greenMain">
-				Sign in
+				{translate('default', 'signin')}
 			</Text>
 
 			<Text preset="headingMedium" marginTop="s8">
-				Enter in your account and start chatting
+				{translate('signin', 'signin-description')}
 			</Text>
 
 			<Box marginTop="s16" gap="s16">
 				<FormTextInput
 					control={control}
-					label="Email"
+					label={translate('default', 'email')}
 					name="email"
-					placeholder="Enter your email"
+					placeholder={translate('signin', 'signin-email-placeholder')}
 					keyboardType="email-address"
 				/>
 				<Box>
-					<FormPasswordInput control={control} label="Password" name="password" placeholder="Enter your password" />
+					<FormPasswordInput
+						control={control}
+						label={translate('default', 'password')}
+						name="password"
+						placeholder={translate('signin', 'signin-password-placeholder')}
+					/>
 
 					<TouchableOpacityBox marginTop="s4" alignSelf="flex-end">
 						<Text preset="paragraphSmall" color="greenMain">
-							Forgot my password
+							{translate('signin', 'signin-forgot-password')}
 						</Text>
 					</TouchableOpacityBox>
 				</Box>
 
-				<Button title="Sign in" marginTop="s24" onPress={handleSubmit(handleFormSubmit)} />
+				<Button title={translate('default', 'signin')} marginTop="s24" onPress={handleSubmit(handleFormSubmit)} />
 			</Box>
 		</Screen>
 	);

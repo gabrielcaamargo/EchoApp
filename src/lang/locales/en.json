@@ -12,7 +12,15 @@
 		"default": {
 			"enter-now": "Enter now",
 			"signup": "Signup",
-			"signin": "Entrar"
+			"signin": "Sign in",
+			"email": "Email",
+			"password": "Password"
+		},
+		"signin": {
+			"signin-description": "Enter in yout account and start chatting",
+			"signin-email-placeholder": "Enter your email",
+			"signin-password-placeholder": "Enter your password",
+			"signin-forgot-password": "Forgot password?"
 		}
   }
 }

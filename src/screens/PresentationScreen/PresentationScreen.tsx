@@ -1,7 +1,7 @@
 import React from 'react';
 import {Box, Button, Screen, Separator, Text} from '@components';
-import {AuthScreenProps} from '@routes';
 import {useTranslation} from '@hooks';
+import {AuthScreenProps} from '@routes';
 
 export function PresentationScreen({navigation}: AuthScreenProps<'PresentationScreen'>) {
 	const {translate} = useTranslation();

@@ -10,7 +10,7 @@ const resources = {
 
 i18n.use(initReactI18next).init({
 	compatibilityJSON: 'v3',
-	lng: 'en-US',
+	lng: 'pt-BR',
 	interpolation: {
 		escapeValue: false,
 	},
