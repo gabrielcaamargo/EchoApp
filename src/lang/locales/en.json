@@ -21,6 +21,10 @@
 			"signin-email-placeholder": "Enter your email",
 			"signin-password-placeholder": "Enter your password",
 			"signin-forgot-password": "Forgot password?"
+		},
+		"form": {
+			"invalid-email": "Invalid email",
+			"short-password": "Password must be at least 8 characters"
 		}
   }
 }

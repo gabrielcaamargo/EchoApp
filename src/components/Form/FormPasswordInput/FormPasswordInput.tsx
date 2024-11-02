@@ -1,7 +1,8 @@
-import {PasswordInput, PasswordInputProps, TextInput, TextInputProps} from '@components';
 import React from 'react';
 import {Controller} from 'react-hook-form';
 import {UseControllerProps, FieldValues} from 'react-hook-form';
+import {PasswordInput, PasswordInputProps, TextInput, TextInputProps} from '@components';
+import {useTranslation} from '@hooks';
 
 export function FormPasswordInput<FormType extends FieldValues>({
 	control,
@@ -9,20 +10,26 @@ export function FormPasswordInput<FormType extends FieldValues>({
 	rules,
 	...textInputProps
 }: PasswordInputProps & UseControllerProps<FormType>) {
+	const {splitPath, translate} = useTranslation();
+
 	return (
 		<Controller
 			control={control}
 			name={name}
 			rules={rules}
-			render={({field, fieldState}) => (
-				<PasswordInput
-					onChangeText={field.onChange}
-					onBlur={field.onBlur}
-					value={field.value}
-					errorMessage={fieldState?.error?.message}
-					{...textInputProps}
-				/>
-			)}
+			render={({field, fieldState}) => {
+				const [path, key] = splitPath(fieldState?.error?.message);
+
+				return (
+					<PasswordInput
+						onChangeText={field.onChange}
+						onBlur={field.onBlur}
+						value={field.value}
+						errorMessage={fieldState.error?.message && translate(path, key)}
+						{...textInputProps}
+					/>
+				);
+			}}
 		/>
 	);
 }
