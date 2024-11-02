@@ -1,5 +1,7 @@
 export * from './Box/Box';
 export * from './Button/Button';
+export * from './Form/FormTextInput/FormTextInput';
+export * from './Form/FormPasswordInput/FormPasswordInput';
 export * from './Text/Text';
 export * from './Icon/Icon';
 export * from './Screen/Screen';

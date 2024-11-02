@@ -24,11 +24,20 @@ export type TextInputIcon =
 export type TextInputProps = {
 	label?: string;
 	boxProps?: BoxProps;
+	errorMessage?: string;
 } & RNTextInputProps &
 	TextInputIcon;
 
-export function TextInput({label, iconName, iconVariant, onPressIcon, boxProps, ...textInputProps}: TextInputProps) {
-	const {greenMain, white} = useAppTheme();
+export function TextInput({
+	label,
+	iconName,
+	iconVariant,
+	onPressIcon,
+	boxProps,
+	errorMessage,
+	...textInputProps
+}: TextInputProps) {
+	const {white} = useAppTheme();
 
 	const $textInputStyles: StyleProp<TextStyle> = {
 		flex: 1,
@@ -42,7 +51,7 @@ export function TextInput({label, iconName, iconVariant, onPressIcon, boxProps, 
 
 			<Box
 				borderWidth={1}
-				borderColor="greenMain"
+				borderColor={errorMessage ? 'redError' : 'greenMain'}
 				marginTop="s4"
 				height={48}
 				paddingHorizontal="s16"
@@ -51,7 +60,11 @@ export function TextInput({label, iconName, iconVariant, onPressIcon, boxProps, 
 				alignItems="center"
 				justifyContent="space-between"
 				{...boxProps}>
-				<RNTextInput cursorColor={greenMain} style={$textInputStyles} {...textInputProps} />
+				<RNTextInput
+					cursorColor={errorMessage ? 'redError' : 'greenMain'}
+					style={$textInputStyles}
+					{...textInputProps}
+				/>
 
 				{iconName && iconVariant && (
 					<TouchableOpacityBox onPress={onPressIcon}>
@@ -59,6 +72,12 @@ export function TextInput({label, iconName, iconVariant, onPressIcon, boxProps, 
 					</TouchableOpacityBox>
 				)}
 			</Box>
+
+			{errorMessage && (
+				<Text color="redError" preset="paragraphSmall">
+					{errorMessage}
+				</Text>
+			)}
 		</Box>
 	);
 }
