@@ -7,10 +7,10 @@ const palette = {
 	blueDark: '#003399',
 	blueDarker: '#001966',
 
-	yellowLighter: '#52B788',
-	yellowLight: '#40916C',
+	greenLighter: '#52B788',
+	greenLight: '#40916C',
 	greenMain: '#24786D',
-	yellowDark: '#1B4332',
+	greenDark: '#1B4332',
 	greenDarker: '#081C15',
 
 	grayLighter: '#E0E0E0',
@@ -35,8 +35,8 @@ export const theme = createTheme({
 		bluePrimary: palette.blueMain,
 		blueSecondary: palette.blueLight,
 
-		greenPrimary: palette.green,
-		greenSecondary: palette.yellowLight,
+		greenPrimary: palette.greenMain,
+		greenSecondary: palette.greenLight,
 
 		grayPrimary: palette.grayMain,
 		graySecondary: palette.grayLight,

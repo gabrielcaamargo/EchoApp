@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import {
+	Pressable,
 	TextInput as RNTextInput,
 	TextInputProps as RNTextInputProps,
 	StyleProp,
@@ -37,7 +38,8 @@ export function TextInput({
 	errorMessage,
 	...textInputProps
 }: TextInputProps) {
-	const {white} = useAppTheme();
+	const {white, grayPrimary} = useAppTheme();
+	const inputRef = useRef<RNTextInput>(null);
 
 	const $textInputStyles: StyleProp<TextStyle> = {
 		flex: 1,
@@ -45,39 +47,47 @@ export function TextInput({
 		color: white,
 	};
 
+	function onInputFocus() {
+		inputRef.current?.focus();
+	}
+
 	return (
 		<Box>
-			{label && <Text>{label}</Text>}
+			<Pressable onPress={onInputFocus}>
+				{label && <Text>{label}</Text>}
 
-			<Box
-				borderWidth={1}
-				borderColor={errorMessage ? 'redError' : 'greenMain'}
-				marginTop="s4"
-				height={48}
-				paddingHorizontal="s16"
-				borderRadius="s8"
-				flexDirection="row"
-				alignItems="center"
-				justifyContent="space-between"
-				{...boxProps}>
-				<RNTextInput
-					cursorColor={errorMessage ? 'redError' : 'greenMain'}
-					style={$textInputStyles}
-					{...textInputProps}
-				/>
+				<Box
+					borderWidth={1}
+					borderColor={errorMessage ? 'redError' : 'greenMain'}
+					marginTop="s4"
+					height={48}
+					paddingHorizontal="s16"
+					borderRadius="s8"
+					flexDirection="row"
+					alignItems="center"
+					justifyContent="space-between"
+					{...boxProps}>
+					<RNTextInput
+						cursorColor={errorMessage ? 'redError' : 'greenMain'}
+						style={$textInputStyles}
+						placeholderTextColor={grayPrimary}
+						ref={inputRef}
+						{...textInputProps}
+					/>
 
-				{iconName && iconVariant && (
-					<TouchableOpacityBox onPress={onPressIcon}>
-						<Icon name={iconName} variant={iconVariant} size={16} />
-					</TouchableOpacityBox>
+					{iconName && iconVariant && (
+						<TouchableOpacityBox onPress={onPressIcon}>
+							<Icon name={iconName} variant={iconVariant} size={16} />
+						</TouchableOpacityBox>
+					)}
+				</Box>
+
+				{errorMessage && (
+					<Text color="redError" preset="paragraphSmall">
+						{errorMessage}
+					</Text>
 				)}
-			</Box>
-
-			{errorMessage && (
-				<Text color="redError" preset="paragraphSmall">
-					{errorMessage}
-				</Text>
-			)}
+			</Pressable>
 		</Box>
 	);
 }

@@ -40,4 +40,5 @@ export function Screen({children, scrollable, style, canGoBack}: ScreenProps) {
 
 const $keyboardAvoidingViewStyles: ViewStyle = {
 	flex: 1,
+	paddingBottom: 24,
 };
