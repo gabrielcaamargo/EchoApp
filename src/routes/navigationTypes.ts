@@ -7,6 +7,14 @@ export type AuthStackParamList = {
 	SignupConfirmationScreen: undefined;
 };
 
+export type AppTabParamList = {
+	ChatsScreen: undefined;
+	CallingsScreen: undefined;
+	NewPostScreen: undefined;
+	ContactsScreen: undefined;
+	ProfileScreen: undefined;
+};
+
 export type AuthScreenProps<RouteName extends keyof AuthStackParamList> = NativeStackScreenProps<
 	AuthStackParamList,
 	RouteName

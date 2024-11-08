@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
+    "@react-navigation/bottom-tabs": "^6.x",
     "@react-navigation/native": "^6.1.18",
     "@react-navigation/native-stack": "^6.11.0",
     "@shopify/restyle": "^2.4.4",
