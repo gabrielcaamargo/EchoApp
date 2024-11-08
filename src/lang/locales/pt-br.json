@@ -32,6 +32,11 @@
 			"short-password": "A senha deve ter pelo menos 8 caracteres",
 			"password-requirements": "A senha deve ter 8+ caracteres, com letras maiúsculas, minúsculas, um número e um caractere especial",
 			"password-mismatch": "As senhas não coincidem"
+		},
+		"success": {
+			"register": "Cadastro",
+			"completed": "completo!",
+			"success-signup-message": "Agora você pode começar a usar o Echo. Faça login na sua conta para começar a usá-lo."
 		}
 	}
 }

@@ -4,6 +4,7 @@ export type AuthStackParamList = {
 	PresentationScreen: undefined;
 	SigninScreen: undefined;
 	SignupScreen: undefined;
+	SignupConfirmationScreen: undefined;
 };
 
 export type AuthScreenProps<RouteName extends keyof AuthStackParamList> = NativeStackScreenProps<
