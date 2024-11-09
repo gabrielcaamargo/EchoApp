@@ -50,7 +50,7 @@ const iconPresets: IconPreset = {
 	Zocial,
 };
 
-interface IconProps {
+export interface IconProps {
 	variant: IconVariant;
 	name: string;
 	size?: number;
