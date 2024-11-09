@@ -42,6 +42,13 @@
 			"register": "Cadastro",
 			"completed": "completo!",
 			"success-signup-message": "Agora você pode começar a usar o Echo. Faça login na sua conta para começar a usá-lo."
+		},
+		"tab-bar": {
+			"chats": "Conversas",
+			"echos": "Echos",
+			"new-echo": "Novo Echo",
+			"callings": "Chamadas",
+			"profile": "Perfil"
 		}
 	}
 }

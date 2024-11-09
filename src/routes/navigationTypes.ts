@@ -10,9 +10,9 @@ export type AuthStackParamList = {
 
 export type AppTabParamList = {
 	ChatsScreen: undefined;
-	CallingsScreen: undefined;
+	EchosScreen: undefined;
 	NewPostScreen: undefined;
-	ContactsScreen: undefined;
+	CallingsScreen: undefined;
 	ProfileScreen: undefined;
 };
 

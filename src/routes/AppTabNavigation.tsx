@@ -18,9 +18,9 @@ export function AppTabNavigation() {
 	return (
 		<Tab.Navigator screenOptions={screenOptions} tabBar={renderTabBar}>
 			<Tab.Screen name="ChatsScreen" component={ChatsScreen} />
-			<Tab.Screen name="CallingsScreen" component={ChatsScreen} />
+			<Tab.Screen name="EchosScreen" component={ChatsScreen} />
 			<Tab.Screen name="NewPostScreen" component={ChatsScreen} />
-			<Tab.Screen name="ContactsScreen" component={ChatsScreen} />
+			<Tab.Screen name="CallingsScreen" component={ChatsScreen} />
 			<Tab.Screen name="ProfileScreen" component={ChatsScreen} />
 		</Tab.Navigator>
 	);

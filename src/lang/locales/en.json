@@ -43,6 +43,13 @@
 			"register": "Register",
 			"completed": "completed!",
 			"success-signup-message": "You can now start enjoying Echo. Login in your account to start using it."
+		},
+		"tab-bar": {
+			"chats": "Chats",
+			"echos": "Echos",
+			"new-echo": "New Echo",
+			"callings": "Callings",
+			"profile": "Profile"
 		}
   }
 }

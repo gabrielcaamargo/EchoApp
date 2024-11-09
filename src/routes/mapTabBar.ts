@@ -15,7 +15,7 @@ type TabBarIcon = {
 
 export const mapTabBar: Record<keyof AppTabParamList, TabBarIcon> = {
 	ChatsScreen: {
-		label: 'Conversas',
+		label: 'chats',
 		focused: {
 			iconVariant: 'Ionicons',
 			iconName: 'chatbubbles',
@@ -25,19 +25,19 @@ export const mapTabBar: Record<keyof AppTabParamList, TabBarIcon> = {
 			iconName: 'chatbubbles-outline',
 		},
 	},
-	CallingsScreen: {
-		label: 'Chamadas',
+	EchosScreen: {
+		label: 'echos',
 		focused: {
 			iconVariant: 'Ionicons',
-			iconName: 'call',
+			iconName: 'journal',
 		},
 		unfocused: {
 			iconVariant: 'Ionicons',
-			iconName: 'call-outline',
+			iconName: 'journal-outline',
 		},
 	},
 	NewPostScreen: {
-		label: 'Novo Post',
+		label: 'new-echo',
 		focused: {
 			iconVariant: 'AntDesign',
 			iconName: 'pluscircle',
@@ -47,19 +47,19 @@ export const mapTabBar: Record<keyof AppTabParamList, TabBarIcon> = {
 			iconName: 'pluscircleo',
 		},
 	},
-	ContactsScreen: {
-		label: 'Contatos',
+	CallingsScreen: {
+		label: 'callings',
 		focused: {
 			iconVariant: 'Ionicons',
-			iconName: 'people',
+			iconName: 'call',
 		},
 		unfocused: {
 			iconVariant: 'Ionicons',
-			iconName: 'people-outline',
+			iconName: 'call-outline',
 		},
 	},
 	ProfileScreen: {
-		label: 'Perfil',
+		label: 'profile',
 		focused: {
 			iconVariant: 'FontAwesome',
 			iconName: 'user',
