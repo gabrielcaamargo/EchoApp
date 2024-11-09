@@ -2,12 +2,13 @@ import React, {useState} from 'react';
 import {TextStyle, ViewStyle} from 'react-native';
 import {OtpInput, Theme} from 'react-native-otp-entry';
 import {Box, Button, Screen, Text} from '@components';
-import {useAppRadius, useAppTheme} from '@hooks';
+import {useAppRadius, useAppTheme, useTranslation} from '@hooks';
 
 export function ValidateEmailScreen() {
 	const {grayMain, greenPrimary} = useAppTheme();
 	const {s8} = useAppRadius();
 	const [validationCode, setValidationCode] = useState<string>();
+	const {translate} = useTranslation();
 
 	const $otpField: ViewStyle = {
 		borderWidth: 2,
@@ -39,10 +40,10 @@ export function ValidateEmailScreen() {
 		<Screen canGoBack>
 			<Box flex={1}>
 				<Text preset="headingLarge" weight="Bold" color="greenPrimary">
-					Email validation
+					{translate('email-validation', 'email-validation-title')}
 				</Text>
 
-				<Text preset="paragraphLarge">We've sent an validation code to your email</Text>
+				<Text preset="paragraphLarge">{translate('email-validation', 'email-validation-text')}</Text>
 
 				<Box marginTop="s24">
 					<OtpInput
@@ -53,7 +54,12 @@ export function ValidateEmailScreen() {
 						onFilled={handleValidateCode}
 					/>
 
-					<Button title="Resend code" marginTop="s16" width={156} onPress={handleResendCode} />
+					<Button
+						title={translate('email-validation', 'email-validation-resend')}
+						marginTop="s16"
+						width={156}
+						onPress={handleResendCode}
+					/>
 				</Box>
 			</Box>
 		</Screen>

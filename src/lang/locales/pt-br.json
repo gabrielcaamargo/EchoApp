@@ -27,6 +27,11 @@
 			"signup-password-placeholder": "Digite sua senha",
 			"signup-confirm-password-placeholder": "Confirme sua senha"
 		},
+		"email-validation": {
+			"email-validation-title": "Validação de email",
+			"email-validation-text": "Enviamos um código de validação para o seu email",
+			"email-validation-resend": "Reenviar código"
+		},
 		"form": {
 			"invalid-email": "Email inválido",
 			"short-password": "A senha deve ter pelo menos 8 caracteres",

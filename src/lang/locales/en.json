@@ -28,6 +28,11 @@
 			"signup-password-placeholder": "Enter your password",
 			"signup-confirm-password-placeholder": "Confirm your password"
 		},
+		"email-validation": {
+			"email-validation-title": "Email validation",
+			"email-validation-text": "We've sent an validation code to your email",
+			"email-validation-resend": "Resend code"
+		},
 		"form": {
 			"invalid-email": "Invalid email",
 			"short-password": "Password must be at least 8 characters",
