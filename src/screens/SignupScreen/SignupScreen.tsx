@@ -4,8 +4,9 @@ import {useForm} from 'react-hook-form';
 import {Box, Button, FormTextInput, Screen, Text} from '@components';
 import {useTranslation} from '@hooks';
 import {signupSchema, SignupSchema} from './signup.schema';
+import {AuthScreenProps} from '@/routes';
 
-export function SignupScreen() {
+export function SignupScreen({navigation}: AuthScreenProps<'SignupScreen'>) {
 	const {translate} = useTranslation();
 	const {control, handleSubmit} = useForm<SignupSchema>({
 		resolver: zodResolver(signupSchema),
@@ -20,6 +21,8 @@ export function SignupScreen() {
 
 	function handleFormSubmit(data: SignupSchema) {
 		console.log({data});
+
+		navigation.navigate('ValidateEmailScreen');
 	}
 
 	return (
