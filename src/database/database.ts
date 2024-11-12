@@ -1,3 +1,4 @@
+import {Platform} from 'react-native';
 import {Database} from '@nozbe/watermelondb';
 import SQLiteAdapter from '@nozbe/watermelondb/adapters/sqlite';
 
@@ -9,7 +10,7 @@ const adapter = new SQLiteAdapter({
 	dbName: 'echoapp',
 	schema,
 	migrations,
-	jsi: true /* Platform.OS === 'ios' */,
+	jsi: Platform.OS === 'ios',
 	onSetUpError: error => {
 		console.log(error);
 	},
