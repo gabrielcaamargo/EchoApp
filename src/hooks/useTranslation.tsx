@@ -1,7 +1,7 @@
+import {ptBr} from '@lang';
 import {useTranslation as useI18Translation} from 'react-i18next';
-import language from '@/lang/locales/pt-br.json';
 
-export type Translations = typeof language.translation;
+export type Translations = typeof ptBr.translation;
 type Path = keyof Translations;
 type Keys<T extends Path> = keyof Translations[T];
 

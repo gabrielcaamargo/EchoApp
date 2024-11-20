@@ -14,6 +14,9 @@
       "@domain": [
         "src/domain"
       ],
+			"@lang": [
+        "src/lang"
+      ],
       "@hooks": [
         "src/hooks"
       ],
