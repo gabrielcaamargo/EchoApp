@@ -5,10 +5,9 @@ import {
 	TextInputProps as RNTextInputProps,
 	StyleProp,
 	TextStyle,
-	ViewStyle,
 } from 'react-native';
 import {Box, BoxProps, Icon, IconVariant, Text, TouchableOpacityBox} from '@components';
-import {useAppTheme} from '@/hooks';
+import {useAppTheme} from '@hooks';
 
 export type TextInputIcon =
 	| {

@@ -1,5 +1,5 @@
 export * from './i18n';
 import en from './locales/en.json';
-import ptBr from './locales/pt-br.json';
+import pt from './locales/pt.json';
 
-export {ptBr, en};
+export {pt as ptBr, en};

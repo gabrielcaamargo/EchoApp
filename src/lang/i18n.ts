@@ -1,16 +1,16 @@
 import i18n from 'i18next';
 import {initReactI18next} from 'react-i18next';
 import en from './locales/en.json';
-import ptBr from './locales/pt-br.json';
+import pt from './locales/pt.json';
 
 const resources = {
-	'en-US': en,
-	'pt-BR': ptBr,
+	en,
+	pt,
 };
 
 i18n.use(initReactI18next).init({
 	compatibilityJSON: 'v3',
-	lng: 'pt-BR',
+	lng: 'en' as keyof typeof resources,
 	interpolation: {
 		escapeValue: false,
 	},

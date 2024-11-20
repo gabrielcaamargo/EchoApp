@@ -48,3 +48,4 @@ pod 'WatermelonDB', path: '../node_modules/@nozbe/watermelondb'
 
 # WatermelonDB dependency
 pod 'simdjson', path: '../node_modules/@nozbe/simdjson', modular_headers: true
+
