@@ -1,6 +1,6 @@
 import {storage} from '@storage';
 import {create} from 'zustand';
-import {createJSONStorage, persist} from 'zustand/middleware';
+import {persist} from 'zustand/middleware';
 
 export type LanguageStore = {
 	language: string;

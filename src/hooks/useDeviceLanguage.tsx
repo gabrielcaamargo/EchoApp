@@ -4,9 +4,6 @@ import {useLanguageStore} from '@store';
 import {getLocales} from 'react-native-localize';
 export function useDeviceLanguage() {
 	const {setLanguage, language} = useLanguageStore();
-	useEffect(() => {
-		console.log('Language:::', language);
-	}, [language]);
 
 	useEffect(() => {
 		setDeviceLanguage();
@@ -18,8 +15,8 @@ export function useDeviceLanguage() {
 		return locales[0].languageCode;
 	}
 
-	function setDeviceLanguage() {
-		const deviceLanguage = getDeviceLanguage();
+	function setDeviceLanguage(newLanguage?: string) {
+		const deviceLanguage = newLanguage || getDeviceLanguage();
 		const availableLanguages = ['en', 'pt'];
 
 		if (deviceLanguage === language || !language) {
