@@ -18,6 +18,7 @@ const palette = {
 	grayMain: '#808080',
 	grayDark: '#4D4D4D',
 	grayDarker: '#262626',
+	grayDarkerOpacity: 'rgba(38, 38, 38, 0.5)',
 	grayDarkest: '#1A1A1A',
 
 	white: '#F5F5F5',
