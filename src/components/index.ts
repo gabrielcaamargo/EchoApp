@@ -1,5 +1,6 @@
 export * from './Box/Box';
 export * from './Button/Button';
+export * from './ChatItem/ChatItem';
 export * from './Form/FormTextInput/FormTextInput';
 export * from './Form/FormPasswordInput/FormPasswordInput';
 export * from './Text/Text';

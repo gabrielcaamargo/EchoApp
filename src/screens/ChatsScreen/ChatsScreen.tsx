@@ -1,9 +1,10 @@
 import React from 'react';
-import {Box, Screen} from '@components';
+import {Screen} from '@components';
+import {ChatsHeader} from './components/ChatsHeader';
 export function ChatsScreen() {
 	return (
 		<Screen>
-			<Box />
+			<ChatsHeader />
 		</Screen>
 	);
 }

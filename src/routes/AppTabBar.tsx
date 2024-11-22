@@ -67,6 +67,8 @@ const $boxWrapper: BoxProps = {
 	paddingTop: 's12',
 	flexDirection: 'row',
 	backgroundColor: 'background',
+	borderTopColor: 'grayDarker',
+	borderWidth: 1,
 };
 
 const $label: TextProps = {
