@@ -11,7 +11,6 @@ export function ChatItem() {
 			width="100%"
 			borderBottomColor="grayDarkerOpacity"
 			borderBottomWidth={2}
-			// backgroundColor="grayDarkerOpacity"
 			paddingHorizontal="s8"
 			paddingVertical="s8"
 			borderRadius="s8"
@@ -19,7 +18,7 @@ export function ChatItem() {
 			alignItems="flex-start"
 			activeOpacity={0.5}
 			gap="s16">
-			<ImageBox source={{uri: 'https://github.com/gabrielcaamargo.png'}} height={64} width={64} borderRadius="s32" />
+			<ImageBox source={{uri: 'https://github.com/gabrielcaamargo.png'}} height={48} width={48} borderRadius="s24" />
 
 			<Box flexDirection="row" justifyContent="space-between" flex={1} paddingRight="s8">
 				<Box gap="s4">
