@@ -1,6 +1,7 @@
 import React from 'react';
 
-import {Box, ImageBox, Text, TouchableOpacityBox} from '@components';
+import {Box, Text, TouchableOpacityBox} from '@components';
+import {ChatItemAvatar} from './components/ChatItemAvatar';
 
 export function ChatItem() {
 	const message =
@@ -18,7 +19,7 @@ export function ChatItem() {
 			alignItems="flex-start"
 			activeOpacity={0.5}
 			gap="s16">
-			<ImageBox source={{uri: 'https://github.com/gabrielcaamargo.png'}} height={48} width={48} borderRadius="s24" />
+			<ChatItemAvatar chatAvatarUrl="https://github.com/gabrielcaamargo.png" />
 
 			<Box flexDirection="row" justifyContent="space-between" flex={1} paddingRight="s8">
 				<Box gap="s4">

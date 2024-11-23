@@ -1,6 +1,7 @@
 export interface Chat {
 	id: string; // e4eaaaf2-d142-11e1-b3e4-080027620cdd
 	chatName?: string; // Gabriel Camargo
+	chatAvatarUrl: string; // https://github.com/gabrielcaamargo.png
 	chatParticipants: Array<{
 		// TODO: Refactor entity
 		id: string; // e4eaaaf2-d142-11e1-b3e4-080027620g25
@@ -29,6 +30,7 @@ export interface Chat {
 export interface ChatApi {
 	id: string; // e4eaaaf2-d142-11e1-b3e4-080027620cdd
 	chat_name?: string; // Gabriel Camargo
+	chat_avatar_url: string; // https://github.com/gabrielcaamargo.png
 	chat_participants: Array<{
 		// TODO: Refactor entity
 		id: string; // e4eaaaf2-d142-11e1-b3e4-080027620g25
